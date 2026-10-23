@@ -2,26 +2,72 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Restaurante</title>
+  <title>Restaurante Verdadeiro</title>
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       margin: 20px;
+      background-color: #0A0A0A;
+      color: #DAA520; /* Dourado */
     }
 
     header {
-      border-bottom: 1px solid black;
-      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #DAA520;
+      padding: 10px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: #DAA520;
+      text-decoration: none;
     }
 
     section {
-      border-bottom: 1px solid black;
-      padding: 20px;
+      border-bottom: 1px solid #DAA520;
+      padding: 20px 0;
     }
 
     input {
       width: 100%;
       padding: 8px;
+      box-sizing: border-box;
+      background-color: #121212;
+      color: #DAA520;
+      border: 1px solid #DAA520;
+      border-radius: 4px;
+    }
+
+    input::placeholder {
+      color: #8c7322;
+    }
+
+    /* Regra CSS para ajustar o tamanho das imagens */
+    img {
+      max-width: 100%;
+      max-height: 300px;
+      width: auto;
+      object-fit: cover;
+      display: block;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #DAA520;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+      background-color: #DAA520;
+      color: #000000;
+      border: none;
+      font-weight: bold;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -29,10 +75,10 @@
 <body>
 
   <header>
-    <h1>LOGO</h1>
+    <h1>Restaurante Verdadeiro - Felipe Ecel e Arthur Vessani</h1>
     <nav>
-      <a href="#inicio">Início</a>
-      <a href="#cardapio">Cardápio</a>
+      <a href="#inicio">Início</a> |
+      <a href="#cardapio">Cardápio</a> |
       <a href="#contato">Contato</a>
     </nav>
   </header>
@@ -43,9 +89,9 @@
 
   <section id="inicio">
     <h2>Destaque</h2>
-    <p>Texto de destaque do restaurante.</p>
-    <img src="https://i.pinimg.com/736x/5e/9c/62/5e9c62d75304404a27415d33dad0cb77.jpg" alt="Foto 1">
-    <img src="https://i.pinimg.com/736x/01/54/30/0154306a2a3420db09d9e358b9d71559.jpg" alt="Foto 2">
+    <p>Onde a comida é feita com verdade</p>
+    <img src="https://i.pinimg.com/736x/26/33/92/2633924acfbdd4871d21174fba81f96c.jpg" alt="Foto 1">
+    <img src="https://i.pinimg.com/1200x/60/17/6e/60176e9db4eac26ae9a307656b3b76eb.jpg" alt="Foto 2">
   </section>
 
   <section>
@@ -56,27 +102,23 @@
 
   <section>
     <h2>Localização</h2>
-    <p>Rua Zé pilantrinha, 6742</p>
-  </section>
-
-  <section>
-    <a href="#cardapio"><button>Ver cardápio</button></a>
+    <p>Rua Oscar Freire, 720 - Cerqueira César, São Paulo - SP</p>
   </section>
 
   <section id="cardapio">
     <h2>Cardápio</h2>
-    <img src="https://i.pinimg.com/736x/88/44/90/8844907fcdc4b4520e5dfd82474b16c2.jpg" alt="Prato 1">
-    <p>Prato 1 - R$ 00,00</p>
-    <img src="https://i.pinimg.com/736x/0d/46/be/0d46be52731f83b3bb7fff9b4405eff0.jpg" alt="Prato 2">
-    <p>Prato 2 - R$ 00,00</p>
-    <img src="https://i.pinimg.com/736x/54/41/f6/5441f6e3c5d3551db74f6bd5d29ba158.jpg" alt="Foto do cardápio">
+    <img src="https://i.pinimg.com/736x/a7/a8/86/a7a886f25d65eb0eeb190107bf07cdc6.jpg" alt="Prato 1">
+    <p>Prato 1 - R$ 60,00</p>
+    <img src="https://i.pinimg.com/1200x/70/2d/e6/702de6afe94266e6fd4da0d1dc7caf24.jpg" alt="Prato 2">
+    <p>Prato 2 - R$ 49,99</p>
+    <img src="https://i.pinimg.com/736x/d4/6d/80/d46d8044e3f80a0ae77d7234e22d80b0.jpg" alt="Foto do cardápio">
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
     <p>Telefone: (67) 4002-8922</p>
-    <p>Email: pombagiradofelipe.com.br</p>
-    <img src="https://i.pinimg.com/736x/f2/f1/1f/f2f11f2fef6106489d784996bfcf5b71.jpg" alt="Foto do restaurante">
+    <p>Email: restauranteverdadeiro@verdadeiro.com</p>
+    <img src="https://i.pinimg.com/736x/20/e3/ea/20e3ea19cf6621b20b59efc7276f0b1b.jpg" alt="Foto do restaurante">
   </section>
 
 </body>

@@ -1,42 +1,25 @@
-/* 3 e 4. Reset geral + box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 10 e 11. Variáveis */
 :root {
     --cor-sangue: #8b0000;
     --cor-zumbi: #2e8b57;
-
-    /* 62. Tokens de cores base */
     --cor-fundo-base: #1a1a1a;
     --cor-texto-base: #e0e0e0;
-
-    /* 63. Token de superfície */
     --cor-superficie: #222222;
-
-    /* 64. Tokens de espaçamento */
     --espaco-p: 8px;
     --espaco-m: 16px;
     --espaco-g: 32px;
-
-    /* 65. Tokens de borda */
     --borda-suave: 8px;
     --borda-arredondada: 50px;
-
-    /* 66. Token de tipografia */
     --fonte-principal: 'Arial', sans-serif;
-
-    /* 77. Sombra padronizada */
     --sombra-padrao: 0 4px 8px rgba(0,0,0,0.5);
-
-    /* 80. Transição universal */
     --transicao-rapida: 0.3s ease;
 }
 
-/* 6, 7, 8, 9 e 67. Body */
 body {
     background-color: var(--cor-fundo-base);
     color: var(--cor-texto-base);
@@ -44,7 +27,6 @@ body {
     line-height: 1.6;
 }
 
-/* 12, 13, 14, 15, 16, 68, 82. Header (mobile first) */
 header {
     background-color: #000000;
     padding: var(--espaco-m) var(--espaco-g);
@@ -55,13 +37,11 @@ header {
     text-align: center;
 }
 
-/* 17 e 75. Título */
 header h1 {
     color: var(--cor-sangue);
     font-size: calc(1.5rem + 1vw);
 }
 
-/* 18, 19, 20 e 83. Menu */
 nav ul {
     display: flex;
     flex-direction: column;
@@ -69,72 +49,74 @@ nav ul {
     list-style: none;
 }
 
-/* 21, 22, 23 e 24. Links */
 nav a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-/* 25. Hover do menu */
 nav a:hover {
     color: var(--cor-zumbi);
 }
 
-/* 26 e 73. Main */
 main {
     width: calc(100% - var(--espaco-g) * 2);
     max-width: 1000px;
     margin: 40px auto;
 }
 
-/* 27 e 74. Seções */
 section {
     margin-bottom: calc(var(--espaco-g) * 2);
 }
 
-/* 28 e 29. Títulos de seção */
 h2 {
     color: var(--cor-zumbi);
     border-bottom: 2px solid var(--cor-sangue);
     padding-bottom: 10px;
 }
 
-/* 30. Boas-vindas */
 #boas-vindas {
     text-align: center;
 }
 
-/* 31, 32, 33, 34, 70 e 86. Imagem */
 img {
     width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: var(--borda-suave);
     filter: grayscale(80%) sepia(30%);
+    transition: filter 0.5s ease;
 }
 
-/* 35. Hover da imagem */
 img:hover {
     filter: none;
 }
 
-/* 36. Legenda */
+a,
+button,
+img {
+    transition: all var(--transicao-rapida);
+}
+
 figcaption {
     font-style: italic;
     color: #888;
     margin-top: 10px;
 }
 
-/* 37 e 84. Flexbox em Benefícios */
 #beneficios {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
-/* 38 e 39. Lista */
+#beneficios h2 {
+    flex-basis: 100%;
+}
+
 ol {
     padding-left: 20px;
 }
@@ -143,12 +125,10 @@ li {
     margin-bottom: 15px;
 }
 
-/* 40. Negrito */
 strong {
     color: var(--cor-sangue);
 }
 
-/* 41, 42, 69, 70 e 78. Aside */
 aside {
     background-color: var(--cor-superficie);
     padding: 20px;
@@ -157,13 +137,11 @@ aside {
     box-shadow: var(--sombra-padrao);
 }
 
-/* 79. Sombra calculada no hover */
 .cartao-zumbi:hover {
     box-shadow: 0 8px calc(var(--espaco-m) * 1.5) rgba(0,0,0,0.7);
     transform: translateY(-5px);
 }
 
-/* 43 e 44. Blockquote */
 blockquote {
     font-size: 1.2rem;
     font-style: italic;
@@ -171,14 +149,12 @@ blockquote {
     padding-left: 20px;
 }
 
-/* 45. Autor */
 cite {
     display: block;
     text-align: right;
     color: red;
 }
 
-/* 46 e 85. Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -186,19 +162,16 @@ table {
     overflow-x: auto;
 }
 
-/* 47. Células */
 th, td {
-    border: 1px solid #444;
+    border: 1px solid var(--cor-borda, #444);
     padding: 15px;
 }
 
-/* 48. Cabeçalho da tabela */
 th {
     background-color: var(--cor-sangue);
     color: white;
 }
 
-/* 49, 70 e 78. Fieldset */
 fieldset {
     border: 2px solid var(--cor-zumbi);
     padding: 25px;
@@ -206,8 +179,8 @@ fieldset {
     box-shadow: var(--sombra-padrao);
 }
 
-/* 50 e 93. Botão de envio */
 button[type="submit"] {
+    background-color: var(--cor-zumbi);
     color: white;
     padding: 15px 30px;
     border: none;
@@ -219,25 +192,69 @@ button:hover {
     background-color: var(--cor-sangue);
 }
 
-/* 71 e 72. Botão com escopo local */
 .botao-match {
     --cor-botao: var(--cor-zumbi);
     background-color: var(--cor-botao);
 }
 
-/* 76. Hover com variável local */
 .botao-match:hover {
     --cor-botao: var(--cor-sangue);
 }
 
-/* 80. Transições universais */
-button,
-a,
-img {
-    transition: all var(--transicao-rapida);
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: var(--borda-suave);
 }
 
-/* 107, 108 e 109. Botão de tema */
+input[type="text"],
+input[type="email"],
+select {
+    background-color: var(--cor-input-fundo, #333);
+    color: var(--cor-input-texto, #fff);
+    border: 1px solid var(--cor-borda, #555);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cor-zumbi);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+details {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--cor-sangue);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--cor-zumbi);
+}
+
+details p {
+    margin-top: 15px;
+    color: #bbb;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+}
+
 #btn-tema {
     border-radius: var(--borda-arredondada);
     padding: var(--espaco-p) var(--espaco-m);
@@ -249,130 +266,53 @@ img {
     color: var(--cor-fundo-base);
 }
 
-/* 51, 52, 70 e 105. Campos */
-input[type="text"],
-input[type="email"],
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: var(--borda-suave);
-    background-color: var(--cor-input-fundo, #333);
-    color: var(--cor-input-texto, #fff);
-    border: 1px solid #555;
-}
-
-/* 53. Foco */
-input:focus,
-select:focus {
-    outline: none;
-    border-color: var(--cor-zumbi);
-}
-
-/* 54. Labels */
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-/* 55. FAQ */
-details {
-    background-color: #222;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-left: 4px solid var(--cor-sangue);
-}
-
-/* 56. Summary */
-summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--cor-zumbi);
-}
-
-/* 57. Resposta do FAQ */
-details p {
-    margin-top: 15px;
-    color: #bbb;
-}
-
-/* 58. Rodapé */
-footer {
-    text-align: center;
-    padding: 30px;
-    margin-top: 40px;
-    border-top: 1px solid #333;
-}
-
-/* 87. Primeira Media Query (Desktop First em incremento de tela) */
 @media (min-width: 768px) {
-    /* 91 e 92. Variáveis globais em telas maiores */
     :root {
         --espaco-m: 24px;
         --espaco-g: 48px;
     }
 
-    /* 88. Header lado a lado */
     header {
         flex-direction: row;
     }
 
-    /* 89. Menu lado a lado */
     nav ul {
         flex-direction: row;
         gap: var(--espaco-g);
     }
 
-    /* 90. Benefícios lado a lado */
     #beneficios {
         flex-direction: row;
     }
 
-    /* 93. Botão adaptável */
     button[type="submit"] {
         width: auto;
     }
 }
 
-/* 94. Segunda Media Query (telas grandes) */
 @media (min-width: 1024px) {
-    /* 95. Limitação de leitura */
-    p {
+    details p {
         max-width: 800px;
         margin: 0 auto;
-    }0
+    }
 }
 
-/* 96. Preferência de sistema: modo claro */
-@media (prefers-color-scheme: light) {
-    /* 97. Invertendo as cores */
+@media (prefers-color-scheme: dark) {
     :root {
-        /* 98. Fundo e texto */
         --cor-fundo-base: #f4f4f9;
         --cor-texto-base: #111111;
-
-        /* 99. Superfície */
         --cor-superficie: #ffffff;
-
-        /* 100. Acessibilidade */
         --cor-borda: #cccccc;
     }
 }
 
-/* 101. Alternância manual de temas */
-html[data-theme='light'] {
-    /* 102. Variáveis claras (passos 97 a 100) */
+html[data-theme='dark'] {
     --cor-fundo-base: #f4f4f9;
     --cor-texto-base: #111111;
     --cor-superficie: #ffffff;
     --cor-borda: #cccccc;
-
-    /* 103. Cores da marca no modo claro */
     --cor-sangue: #cc0000;
     --cor-zumbi: #006400;
-
-    /* 104. Campos de entrada no claro */
     --cor-input-fundo: #ffffff;
     --cor-input-texto: #333333;
 }
